@@ -68,8 +68,8 @@ class Lobe(Enum):
 
 LOBE_MODEL_MAP = {
     Lobe.SENSORY:   ["niyah:writer", "niyah:latest", "llama3.2:3b"],
-    Lobe.COGNITIVE:  ["deepseek-r1:8b", "deepseek-r1:1.5b", "niyah:sovereign"],
-    Lobe.EXECUTIVE:  ["niyah:sovereign", "niyah:v4", "niyah:latest"],
+    Lobe.COGNITIVE:  ["deepseek-r1:1.5b", "niyah:v4", "niyah:v3"],
+    Lobe.EXECUTIVE:  ["niyah:v4", "niyah:sovereign", "niyah:latest"],
 }
 
 LOBE_PARAMS = {
