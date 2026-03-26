@@ -1,0 +1,17 @@
+[Unit]
+Description=NIYAH Engine v5 — Sovereign AI Orchestrator — KHAWRIZM Labs
+After=network.target ollama.service
+Wants=ollama.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/niyah/niyah_core.py --server --port 7474
+Restart=always
+RestartSec=5
+Environment=NIYAH_OLLAMA_URL=http://localhost:11434
+Environment=NIYAH_LOG_DIR=/var/log/niyah
+Environment=NIYAH_DATA_DIR=/var/lib/niyah
+WorkingDirectory=/opt/niyah
+
+[Install]
+WantedBy=multi-user.target
